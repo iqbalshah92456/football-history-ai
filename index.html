@@ -1,21 +1,170 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Football History AI</title>
-    <meta name="description" content="Comprehensive interactive football encyclopedia and AI historian exploring World Cup tournaments, legendary players, iconic clubs, major competitions, Ballon d'Or winners, historic matches, and all-time records." />
-    <meta property="og:title" content="Football History AI" />
-    <meta property="og:description" content="Comprehensive interactive football encyclopedia and AI historian exploring World Cup tournaments, legendary players, iconic clubs, major competitions, Ballon d'Or winners, historic matches, and all-time records." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Cabinet+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football History AI</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b1220;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #111c33;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #263653;
+    }
+
+    header h1 {
+      font-size: 30px;
+      color: #4ade80;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #b8c4d9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #111c33;
+      border: 1px solid #263653;
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #40516f;
+      background: #0b1220;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #22c55e;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    #result {
+      margin-top: 20px;
+      line-height: 1.7;
+      color: #dbeafe;
+    }
+
+    .history {
+      display: grid;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .history div {
+      padding: 15px;
+      background: #182640;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8190a8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>⚽ Football History AI</h1>
+    <p>Explore football history with AI</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Ask Football History AI</h2>
+
+      <input
+        id="question"
+        type="text"
+        placeholder="Example: Who won the 2018 World Cup?"
+      />
+
+      <button onclick="askAI()">Ask AI</button>
+
+      <div id="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Popular Football History</h2>
+
+      <div class="history">
+        <div>🏆 FIFA World Cup History</div>
+        <div>🇵🇹 Cristiano Ronaldo Career</div>
+        <div>🇦🇷 Lionel Messi Career</div>
+        <div>🏟️ Legendary Football Clubs</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Football History AI © 2026
+  </footer>
+
+  <script>
+    function askAI() {
+      const question = document.getElementById("question").value.trim();
+      const result = document.getElementById("result");
+
+      if (!question) {
+        result.innerHTML = "⚠️ Please enter a football question.";
+        return;
+      }
+
+      result.innerHTML =
+        "🤖 AI is preparing your football history answer...<br><br>" +
+        "Your question: <b>" + question + "</b>";
+    }
+  </script>
+
+</body>
+</html>
+```
