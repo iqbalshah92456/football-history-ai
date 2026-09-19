@@ -1,0 +1,6 @@
+{
+  "name": "Football History AI",
+  "description": "Comprehensive interactive football encyclopedia and AI historian exploring World Cup tournaments, legendary players, iconic clubs, major competitions, Ballon d'Or winners, historic matches, and all-time records.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
